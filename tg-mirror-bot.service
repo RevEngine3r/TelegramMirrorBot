@@ -1,0 +1,13 @@
+[Unit]
+Description=DadashRezaArchiveBot
+After=multi-user.target
+
+[Service]
+Type=idle
+Restart=always
+RestartSec=5
+WorkingDirectory=/opt/MirrorBot
+ExecStart=/usr/bin/python3 /opt/MirrorBot/main.py -c $CONFFILE
+
+[Install]
+WantedBy=multi-user.target
